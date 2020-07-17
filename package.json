@@ -1,0 +1,24 @@
+{
+  "name": "@toelf/crash-reporter",
+  "version": "1.2.0",
+  "description": "Una libreria para generar reportes en caso de error.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node examples/test.js"
+  },
+  "keywords": [
+    "crash",
+    "error",
+    "reporter",
+    "testing",
+    "testing-tools",
+    "backend"
+  ],
+  "author": {
+    "email": "arceleandro@protonmail.com",
+    "name": "Reymundus",
+    "url": "https://github.com/toelf412"
+  },
+  "repository": "https://github.com/toelf412/crash-reporter",
+  "license": "MIT"
+}
