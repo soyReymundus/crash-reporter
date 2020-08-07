@@ -1,6 +1,6 @@
 {
   "name": "@toelf/crash-reporter",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Una libreria para generar reportes en caso de error.",
   "main": "index.js",
   "scripts": {

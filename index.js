@@ -54,9 +54,15 @@ module.exports = class {
      * @returns {void}
      */
     createReport(exit = true) {
-        this.createHeader();
-        this.createJavascriptStack();
-        this.setProcessProperties();
+        try {
+            this.createHeader();
+        } catch (e) { };
+        try {
+            this.createJavascriptStack();
+        } catch (e) { };
+        try {
+            this.setProcessProperties();
+        } catch (e) { };
         if (!existsSync(resolve(this.filePath + "/"))) mkdirSync(resolve(this.filePath));
         appendFileSync(resolve(this.filePath + "/" + this.fileName), JSON.stringify(this.report));
         if (exit) this.actionsAndLogs();
@@ -79,9 +85,15 @@ module.exports = class {
     };
 
     setProcessProperties() {
-        this.report["resourceUsage"] = process.resourceUsage();
-        this.report["environmentVariables"] = process.env;
-        return { "environmentVariables": process.env, "resourceUsage": process.resourceUsage() };
+        try {
+            this.report["resourceUsage"] = process.resourceUsage();
+        } catch (e) { };
+        try {
+            this.report["environmentVariables"] = process.env;
+        } catch (e) { };
+        try {
+            return { "environmentVariables": process.env, "resourceUsage": process.resourceUsage() };
+        } catch (e) { };
     };
 
     createJavascriptStack(err) {
